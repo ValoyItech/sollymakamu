@@ -1,0 +1,1482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-one (Makhense) - Solly Makamu | Tsonga Entertainment Icon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            background-size: 400% 400%;
+            animation: gradientShift 8s ease infinite;
+        }
+        
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .card-3d {
+            transform-style: preserve-3d;
+            transition: all 0.5s cubic-bezier(0.23, 1, 0.320, 1);
+        }
+        
+        /* Disable 3D effects on mobile to prevent vibration */
+        @media (min-width: 768px) {
+            .card-3d:hover {
+                transform: rotateY(10deg) rotateX(10deg) translateZ(20px);
+                box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+            }
+        }
+        
+        @media (max-width: 767px) {
+            .card-3d:hover {
+                transform: scale(1.02);
+                box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            }
+        }
+        
+        .floating-element {
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        /* Reduce floating animation on mobile */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(5deg); }
+            66% { transform: translateY(-10px) rotate(-5deg); }
+        }
+        
+        @media (max-width: 767px) {
+            .floating-element {
+                animation: floatMobile 8s ease-in-out infinite;
+            }
+            
+            @keyframes floatMobile {
+                0%, 100% { transform: translateY(0px); }
+                50% { transform: translateY(-10px); }
+            }
+        }
+        
+/* Strong glow for big headings */
+.text-glow{
+  color:#fff;
+  text-shadow:0 0 8px rgba(0,0,0,.8),0 0 16px rgba(0,0,0,.6);
+}
+
+/* Softer glow for smaller text so it doesn't look fuzzy */
+.text-glow-soft{
+  color:#fff;
+  text-shadow:0 0 4px rgba(0,0,0,.8),0 0 8px rgba(0,0,0,.6);
+}
+
+/* If your typing effect used gradient text or clipping, force visible fill */
+.typing-animation{
+  -webkit-text-fill-color:#fff; /* Safari/Chrome */
+  color:#fff;
+  mix-blend-mode:normal; /* avoid weird blending on dark images */
+}
+
+
+        
+        .neon-border {
+            box-shadow: 0 0 20px rgba(102, 126, 234, 0.5);
+            border: 2px solid rgba(102, 126, 234, 0.3);
+        }
+        
+        .slide-in-left {
+            animation: slideInLeft 1s ease-out forwards;
+            opacity: 0;
+            transform: translateX(-100px);
+        }
+        
+        .slide-in-right {
+            animation: slideInRight 1s ease-out forwards;
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 1s ease-out forwards;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        
+        @keyframes slideInLeft {
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes slideInRight {
+            to { opacity: 1; transform: translateX(0); }
+        }
+        
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .stagger-1 { animation-delay: 0.1s; }
+        .stagger-2 { animation-delay: 0.2s; }
+        .stagger-3 { animation-delay: 0.3s; }
+        .stagger-4 { animation-delay: 0.4s; }
+        .stagger-5 { animation-delay: 0.5s; }
+        .stagger-6 { animation-delay: 0.6s; }
+        
+        .social-icon {
+            transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        }
+        
+        .social-icon:hover {
+            transform: translateY(-10px) scale(1.2);
+        }
+        
+        .pulse-glow {
+            animation: pulseGlow 2s infinite;
+        }
+        
+        @keyframes pulseGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(102, 126, 234, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(102, 126, 234, 0.8); }
+        }
+        
+        .morphing-bg {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: morphing 15s ease infinite;
+        }
+        
+        @keyframes morphing {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .talent-card {
+            background: linear-gradient(145deg, #ffffff, #f0f0f0);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .talent-card:hover {
+            transform: translateY(-15px) scale(1.05);
+            background: linear-gradient(145deg, #f8fafc, #e2e8f0);
+        }
+        
+        .parallax-element {
+            transition: transform 0.1s ease-out;
+        }
+        
+        .section-reveal {
+            opacity: 0;
+            transform: translateY(60px);
+            transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        .section-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .music-wave {
+            animation: musicWave 2s ease-in-out infinite;
+        }
+        
+        @keyframes musicWave {
+            0%, 100% { height: 20px; }
+            50% { height: 40px; }
+        }
+        
+        .typing-animation {
+            overflow: hidden;
+            border-right: 3px solid;
+            white-space: nowrap;
+            animation: typing 3s steps(40, end), blink-caret 0.75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: white; }
+        }
+
+        /* Enhanced slideshow styles */
+        .hero-slide {
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .hero-bg-slide {
+            transition: all 1s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .slideshow-dot {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .slideshow-dot:hover {
+            transform: scale(1.3);
+        }
+
+        .transparent-overlay {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Desktop Hero - Full HD 1920x1080 */
+        .desktop-hero {
+            height: 1080px;
+            width: 100vw;
+        }
+
+        /* Mobile Hero - Portrait 1080x1920 */
+        @media (max-width: 768px) {
+            .mobile-hero {
+                height: calc(100vh - 80px);
+                min-height: 800px;
+                width: 100vw;
+            }
+        }
+
+        /* Ensure hero starts after navigation */
+        @media (min-width: 769px) {
+            .desktop-hero {
+                margin-top: 0;
+            }
+        }
+
+        /* Mobile-specific optimizations */
+        @media (max-width: 768px) {
+            /* Reduce animations on mobile for better performance */
+            .floating-element {
+                animation: none;
+            }
+            
+            /* Optimize text sizing */
+            .typing-animation {
+                animation: none;
+                border-right: none;
+            }
+            
+            /* Better mobile spacing */
+            .hero-mobile-content {
+                min-height: calc(100vh - 80px);
+            }
+            
+            /* Mobile navigation improvements */
+            .mobile-hero {
+                overflow-x: hidden;
+            }
+            
+            /* Improve mobile touch targets */
+            .social-icon {
+                min-width: 44px;
+                min-height: 44px;
+            }
+            
+            /* Better mobile text readability */
+            .text-glow {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed w-full top-0 z-50 glass-effect">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo + Branding -->
+            <div class="flex items-center space-x-3">
+                <img src="images/logo.png" alt="G-one Logo" class="w-12 h-12 rounded-full shadow-lg">
+                <div>
+                    <div class="text-xl font-bold text-white">G-One</div>
+                    <div class="text-xs text-black-300">Solly Makamu</div>
+                </div>
+            </div>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link text-white hover:text-purple-400 transition-colors font-medium">Home</a>
+                <a href="#about" class="nav-link text-white hover:text-purple-400 transition-colors font-medium">About</a>
+                <a href="#talents" class="nav-link text-white hover:text-purple-400 transition-colors font-medium">Talents</a>
+                <a href="media.html" class="nav-link text-white hover:text-purple-400 transition-colors font-medium">Media</a>
+                <a href="#recognition" class="nav-link text-white hover:text-purple-400 transition-colors font-medium">Awards</a>
+                <a href="#contact" class="nav-link text-white hover:text-purple-400 transition-colors font-medium">Contact</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="md:hidden text-white z-50 relative">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </div>
+    
+    <!-- Mobile Sidebar Menu -->
+    <div id="mobile-sidebar" class="fixed inset-0 z-50 md:hidden transform translate-x-full transition-transform duration-300 ease-in-out">
+        <!-- Backdrop -->
+        <div id="sidebar-backdrop" class="absolute inset-0 bg-black bg-opacity-80"></div>
+        
+        <!-- Sidebar -->
+        <div class="absolute right-0 top-0 h-full w-80 max-w-sm bg-gray-900 border-l-2 border-gray-700 shadow-2xl">
+            <!-- Header -->
+            <div class="flex items-center justify-between p-6 border-b border-gray-700">
+                <div class="flex items-center space-x-3">
+                    <img src="images/logo.png" alt="G-one Logo" class="w-10 h-10 rounded-full shadow-md">
+                    <div>
+                        <div class="text-lg font-bold text-white">G-one</div>
+                        <div class="text-xs text-gray-400">Solly Makamu</div>
+                    </div>
+                </div>
+                <button id="close-sidebar" class="text-white hover:text-purple-400 transition-colors">
+                    <i class="fas fa-times text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="p-6 bg-gray-900">
+                <nav class="space-y-4">
+                    <a href="#home" class="sidebar-link flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-800 transition-all group">
+                        <div class="w-10 h-10 bg-purple-600 rounded-xl flex items-center justify-center group-hover:bg-purple-700 transition-all">
+                            <i class="fas fa-home text-white"></i>
+                        </div>
+                        <span class="text-white font-medium">Home</span>
+                    </a>
+                    <a href="#about" class="sidebar-link flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-800 transition-all group">
+                        <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center group-hover:bg-blue-700 transition-all">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <span class="text-white font-medium">About</span>
+                    </a>
+                    <a href="#talents" class="sidebar-link flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-800 transition-all group">
+                        <div class="w-10 h-10 bg-yellow-600 rounded-xl flex items-center justify-center group-hover:bg-yellow-700 transition-all">
+                            <i class="fas fa-star text-white"></i>
+                        </div>
+                        <span class="text-white font-medium">Talents</span>
+                    </a>
+                    <a href="media.html" class="sidebar-link flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-800 transition-all group">
+                        <div class="w-10 h-10 bg-red-600 rounded-xl flex items-center justify-center group-hover:bg-red-700 transition-all">
+                            <i class="fas fa-play text-white"></i>
+                        </div>
+                        <span class="text-white font-medium">Media</span>
+                    </a>
+                    <a href="#recognition" class="sidebar-link flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-800 transition-all group">
+                        <div class="w-10 h-10 bg-orange-600 rounded-xl flex items-center justify-center group-hover:bg-orange-700 transition-all">
+                            <i class="fas fa-trophy text-white"></i>
+                        </div>
+                        <span class="text-white font-medium">Awards</span>
+                    </a>
+                    <a href="#contact" class="sidebar-link flex items-center space-x-4 p-4 rounded-2xl hover:bg-gray-800 transition-all group">
+                        <div class="w-10 h-10 bg-green-600 rounded-xl flex items-center justify-center group-hover:bg-green-700 transition-all">
+                            <i class="fas fa-envelope text-white"></i>
+                        </div>
+                        <span class="text-white font-medium">Contact</span>
+                    </a>
+                </nav>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="p-6 border-t border-gray-700 bg-gray-900">
+                <h3 class="text-white font-semibold mb-4">Follow G-one</h3>
+                <div class="grid grid-cols-3 gap-3">
+                    <a href="https://www.youtube.com/@GOneSollyMakamu" target="_blank" class="flex items-center justify-center w-12 h-12 bg-red-600 rounded-xl hover:bg-red-700 transition-colors">
+                        <i class="fab fa-youtube"></i>
+                    </a>
+                    <a href="https://www.facebook.com/p/G-one-Solly-Makamu-100043917829868/?_rdr" target="_blank" class="flex items-center justify-center w-12 h-12 bg-blue-600 rounded-xl hover:bg-blue-700 transition-colors">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/discover/solly-makamu?" target="_blank" class="flex items-center justify-center w-12 h-12 bg-gray-800 rounded-xl hover:bg-gray-700 transition-colors">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://open.spotify.com/artist/1M1b0faWqjVoSHa8wheRpF?si=TP6PaCO6TEeq-3Gw0xHakA target="_blank" class="flex items-center justify-center w-12 h-12 bg-green-600 rounded-xl hover:bg-green-700 transition-colors">
+                        <i class="fab fa-spotify"></i>
+                    </a>
+                    <a href="https://music.apple.com/ca/artist/solly-makamu/1536504169" target="_blank" class="flex items-center justify-center w-12 h-12 bg-gray-700 rounded-xl hover:bg-gray-600 transition-colors">
+                        <i class="fab fa-apple"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gonesollymakamu/?hl=en" target="_blank" class="flex items-center justify-center w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl hover:from-purple-600 hover:to-pink-600 transition-colors">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Contact Info -->
+            <div class="p-6 border-t border-gray-700 bg-gray-900">
+                <div class="text-center">
+                    <p class="text-gray-400 text-sm mb-2">Mdabula Village, Limpopo</p>
+                    <p class="text-purple-400 text-sm font-medium">🏆 Best Songwriter 2022</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!-- Hero Section – Real Background Slides ONLY -->
+<section id="home"
+         class="hero-gradient pt-20 relative overflow-hidden min-h-screen flex items-center">
+
+  <!-- DESKTOP slides (≥768px) -->
+  <div class="absolute inset-0 w-full h-full hidden md:block">
+    <div id="hero-bg-desktop" class="w-full h-full relative">
+      <picture class="hero-bg-slide active absolute inset-0 w-full h-full">
+        <img src="images/hero1.jpg"
+             class="w-full h-full object-cover" alt="Performance">
+      </picture>
+      <picture class="hero-bg-slide absolute inset-0 w-full h-full opacity-0">
+        <img src="images/hero2.jpg"
+             class="w-full h-full object-cover" alt="Studio">
+      </picture>
+      <picture class="hero-bg-slide absolute inset-0 w-full h-full opacity-0">
+        <img src="images/hero3.jpg"
+             class="w-full h-full object-cover" alt="Comedy">
+      </picture>
+    </div>
+  </div>
+
+  <!-- MOBILE slides (<768px) -->
+  <div class="absolute inset-0 w-full h-full md:hidden">
+    <div id="hero-bg-mobile" class="w-full h-full relative">
+      <picture class="hero-bg-slide active absolute inset-0 w-full h-full">
+        <img src="images/hero1m.jpg"
+             class="w-full h-full object-cover" alt="Performance">
+      </picture>
+      <picture class="hero-bg-slide absolute inset-0 w-full h-full opacity-0">
+        <img src="images/hero2m.jpg"
+             class="w-full h-full object-cover" alt="Studio">
+      </picture>
+      <picture class="hero-bg-slide absolute inset-0 w-full h-full opacity-0">
+        <img src="images/hero3m.jpg"
+             class="w-full h-full object-cover" alt="Comedy">
+      </picture>
+    </div>
+  </div>
+
+  <!-- Content layer (unchanged except avatar removed) -->
+  <div class="relative z-10 w-full flex items-center justify-center py-8">
+    <!-- Floating particles -->
+    <div class="absolute inset-0 hidden md:block">
+      <div class="floating-element absolute top-20 left-10 text-4xl opacity-30 stagger-1">🎵</div>
+      <div class="floating-element absolute top-40 right-20 text-3xl opacity-30 stagger-2">🎭</div>
+      <div class="floating-element absolute bottom-40 left-20 text-5xl opacity-30 stagger-3">🎬</div>
+      <div class="floating-element absolute bottom-20 right-10 text-2xl opacity-30 stagger-4">😄</div>
+      <div class="floating-element absolute top-60 left-1/3 text-3xl opacity-20 stagger-5">🎸</div>
+      <div class="floating-element absolute bottom-60 right-1/3 text-4xl opacity-20 stagger-6">🎤</div>
+    </div>
+
+    <div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
+      <!-- =====  CIRCULAR AVATAR REMOVED  ===== -->
+
+<h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-black mb-4 text-glow slide-in-right stagger-2 leading-tight">
+  Solly Makamu
+</h1>
+
+<div class="typing-animation text-lg sm:text-xl md:text-2xl lg:text-4xl font-light mb-6 text-glow-soft stagger-3">
+  G-One (Makhense) - Tsonga Icon
+</div>
+
+<p class="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 fade-in-up stagger-4 max-w-3xl mx-auto px-4 text-glow-soft">
+  Multi-talented entertainer from Mdabula Village, bringing Xitsonga culture to the world stage
+</p>
+
+
+      <!-- Music visualizer bars -->
+      <div class="flex justify-center space-x-1 mb-8 fade-in-up stagger-5">
+        <div class="w-2 bg-white music-wave" style="animation-delay: 0s;"></div>
+        <div class="w-2 bg-white music-wave" style="animation-delay: 0.1s;"></div>
+        <div class="w-2 bg-white music-wave" style="animation-delay: 0.2s;"></div>
+        <div class="w-2 bg-white music-wave" style="animation-delay: 0.3s;"></div>
+        <div class="w-2 bg-white music-wave" style="animation-delay: 0.4s;"></div>
+        <div class="w-2 bg-white music-wave" style="animation-delay: 0.5s;"></div>
+        <div class="w-2 bg-white music-wave" style="animation-delay: 0.6s;"></div>
+      </div>
+
+      <!-- Tags -->
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-8 sm:mb-12 fade-in-up stagger-6 px-4">
+        <span class="glass-effect px-3 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-medium">🎵 Musician</span>
+        <span class="glass-effect px-3 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-medium">🎭 Actor</span>
+        <span class="glass-effect px-3 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-medium">😄 Comedian</span>
+        <span class="glass-effect px-3 py-2 sm:px-6 sm:py-3 rounded-full text-xs sm:text-sm font-medium">🎬 Director</span>
+      </div>
+
+      <!-- Social icons -->
+      <div class="flex flex-wrap justify-center gap-3 sm:gap-6 mb-8 sm:mb-12 fade-in-up stagger-6 px-4">
+        <a href="https://www.youtube.com/@GOneSollyMakamu" target="_blank" class="social-icon w-12 h-12 sm:w-14 sm:h-14 bg-red-600 rounded-full flex items-center justify-center hover:bg-red-700"><i class="fab fa-youtube text-lg sm:text-xl"></i></a>
+        <a href="https://www.facebook.com/p/G-one-Solly-Makamu-100043917829868/?_rdr" target="_blank" class="social-icon w-12 h-12 sm:w-14 sm:h-14 bg-blue-600 rounded-full flex items-center justify-center hover:bg-blue-700"><i class="fab fa-facebook text-lg sm:text-xl"></i></a>
+        <a href="https://www.tiktok.com/discover/solly-makamu?" target="_blank" class="social-icon w-12 h-12 sm:w-14 sm:h-14 bg-black rounded-full flex items-center justify-center hover:bg-gray-800"><i class="fab fa-tiktok text-lg sm:text-xl"></i></a>
+        <a href="https://open.spotify.com/artist/1M1b0faWqjVoSHa8wheRpF?si=TP6PaCO6TEeq-3Gw0xHakA target="_blank" class="social-icon w-12 h-12 sm:w-14 sm:h-14 bg-green-600 rounded-full flex items-center justify-center hover:bg-green-700"><i class="fab fa-spotify text-lg sm:text-xl"></i></a>
+        <a href="https://music.apple.com/ca/artist/solly-makamu/1536504169" target="_blank" class="social-icon w-12 h-12 sm:w-14 sm:h-14 bg-gray-800 rounded-full flex items-center justify-center hover:bg-gray-900"><i class="fab fa-apple text-lg sm:text-xl"></i></a>
+        <a href="https://www.instagram.com/gonesollymakamu/?hl=en" target="_blank" class="social-icon w-12 h-12 sm:w-14 sm:h-14 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full flex items-center justify-center"><i class="fab fa-instagram text-lg sm:text-xl"></i></a>
+      </div>
+
+      <!-- CTA -->
+      <button onclick="scrollToSection('about')" class="glass-effect px-10 py-4 rounded-full font-semibold hover:bg-white hover:bg-opacity-20 transition-all transform hover:scale-105 pulse-glow">
+        Discover My Journey <i class="fas fa-arrow-down ml-2"></i>
+      </button>
+    </div>
+  </div>
+</section>
+
+    <!-- About Section – Real Image, No Zoom -->
+<section id="about" class="py-20 bg-gray-900 relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Heading -->
+    <div class="text-center mb-16 section-reveal">
+      <h2 class="text-5xl font-bold text-white mb-6">About G-one</h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+        From the heart of Limpopo emerges a true renaissance artist, bringing the rich culture of Xitsonga to the world stage
+      </p>
+    </div>
+
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+      <!-- LEFT: Photo Card -->
+      <div class="section-reveal">
+        <div class="glass-effect p-6 sm:p-8 rounded-3xl card-3d">
+          <!-- Real Image – object-contain keeps full frame -->
+          <img src="images/about.jpg"
+               alt="G-one (Solly Makamu)"
+               class="w-full h-auto max-h-[420px] object-contain rounded-2xl mb-6">
+
+          <div class="text-center">
+            <h3 class="text-3xl font-bold text-white mb-2">Solly Makamu</h3>
+            <p class="text-purple-400 mb-6 text-lg">Known professionally as G-one (Makhense)</p>
+
+            <!-- Quick Info -->
+            <div class="space-y-3 text-gray-300">
+              <div class="flex items-center justify-center space-x-2">
+                <i class="fas fa-home text-purple-400"></i>
+                <span>Mdabula Village, Malamulele</span>
+              </div>
+              <div class="flex items-center justify-center space-x-2">
+                <i class="fas fa-map-marker-alt text-purple-400"></i>
+                <span>Limpopo, South Africa</span>
+              </div>
+              <div class="flex items-center justify-center space-x-2">
+                <i class="fas fa-globe text-purple-400"></i>
+                <span>Xitsonga Cultural Ambassador</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Text -->
+      <div class="section-reveal">
+        <h3 class="text-4xl font-bold text-white mb-8">Multi-Talented Entertainer</h3>
+        <p class="text-lg text-gray-300 mb-6 leading-relaxed">
+          G-one represents the epitome of artistic versatility, seamlessly blending traditional Xitsonga culture with contemporary entertainment. His journey from Mdabula village to becoming a recognized icon showcases the power of passion, dedication, and cultural pride.
+        </p>
+        <p class="text-lg text-gray-300 mb-8 leading-relaxed">
+          As both G-one and Makhense, Solly has created a unique identity that resonates with audiences across multiple platforms and mediums, making him a true ambassador of Tsonga culture in the modern entertainment landscape.
+        </p>
+
+        <!-- Stats -->
+        <div class="grid grid-cols-2 gap-6">
+          <div class="glass-effect p-6 rounded-2xl text-center">
+            <div class="text-3xl font-bold text-purple-400 mb-2">10+</div>
+            <div class="text-gray-300">Years Experience</div>
+          </div>
+          <div class="glass-effect p-6 rounded-2xl text-center">
+            <div class="text-3xl font-bold text-purple-400 mb-2">7</div>
+            <div class="text-gray-300">Skill Areas</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- Talents Section -->
+<section id="talents" class="py-20 morphing-bg relative">
+  <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+    <!-- Header -->
+    <div class="text-center mb-16 section-reveal">
+      <h2 class="text-5xl font-bold text-white mb-6">Diverse Talents</h2>
+      <div class="w-24 h-1 bg-white mx-auto mb-6"></div>
+      <p class="text-xl text-gray-200">A master of multiple crafts, bringing excellence to every endeavor</p>
+    </div>
+
+    <!-- Slider -->
+    <div class="relative">
+      <div class="overflow-hidden rounded-3xl">
+        <div id="talent-slider" class="flex transition-transform duration-500 ease-in-out">
+
+          <!-- MUSIC -->
+          <div class="w-full flex-shrink-0">
+            <div class="glass-effect rounded-3xl p-6 sm:p-8 mx-2 sm:mx-4">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                <!-- Image -->
+                <div class="text-center">
+                  <a href="https://open.spotify.com/" target="_blank">
+                    <div class="mx-auto max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]">
+                      <img src="images/music.png" alt="Music Talent" class="w-full h-auto object-contain drop-shadow-2xl">
+                    </div>
+                  </a>
+                </div>
+                <!-- Text -->
+                <div class="text-center lg:text-left">
+                  <div class="flex items-center justify-center lg:justify-start mb-6">
+                    <i class="fas fa-music text-purple-400 text-4xl sm:text-5xl mr-3 pulse-glow"></i>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white">Music</h3>
+                  </div>
+                  <p class="text-base sm:text-lg text-gray-300 mb-6">Creating soulful melodies and rhythms that celebrate Xitsonga culture while embracing modern sounds.</p>
+                  <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-microphone text-purple-400"></i><span class="text-white text-sm sm:text-base">Singer</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-guitar text-purple-400"></i><span class="text-white text-sm sm:text-base">Guitarist</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-keyboard text-purple-400"></i><span class="text-white text-sm sm:text-base">Keyboardist</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-sliders-h text-purple-400"></i><span class="text-white text-sm sm:text-base">Producer</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PERFORMANCE -->
+          <div class="w-full flex-shrink-0">
+            <div class="glass-effect rounded-3xl p-6 sm:p-8 mx-2 sm:mx-4">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                <div class="text-center">
+                  <a href="https://youtube.com/" target="_blank">
+                    <div class="mx-auto max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]">
+                      <img src="images/perfomance.png" alt="Performance Talent" class="w-full h-auto object-contain drop-shadow-2xl">
+                    </div>
+                  </a>
+                </div>
+                <div class="text-center lg:text-left">
+                  <div class="flex items-center justify-center lg:justify-start mb-6">
+                    <i class="fas fa-theater-masks text-blue-400 text-4xl sm:text-5xl mr-3 pulse-glow"></i>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white">Performance</h3>
+                  </div>
+                  <p class="text-base sm:text-lg text-gray-300 mb-6">Bringing characters to life and entertaining audiences through dynamic stage presence and authentic storytelling.</p>
+                  <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-user-astronaut text-blue-400"></i><span class="text-white text-sm sm:text-base">Actor</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-laugh text-blue-400"></i><span class="text-white text-sm sm:text-base">Comedian</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-microphone-alt text-blue-400"></i><span class="text-white text-sm sm:text-base">MC / Host</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-bullhorn text-blue-400"></i><span class="text-white text-sm sm:text-base">Speaker</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PRODUCTION -->
+          <div class="w-full flex-shrink-0">
+            <div class="glass-effect rounded-3xl p-6 sm:p-8 mx-2 sm:mx-4">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                <div class="text-center">
+                  <a href="https://vimeo.com/" target="_blank">
+                    <div class="mx-auto max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]">
+                      <img src="images/production.png" alt="Production Talent" class="w-full h-auto object-contain drop-shadow-2xl">
+                    </div>
+                  </a>
+                </div>
+                <div class="text-center lg:text-left">
+                  <div class="flex items-center justify-center lg:justify-start mb-6">
+                    <i class="fas fa-film text-orange-400 text-4xl sm:text-5xl mr-3 pulse-glow"></i>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white">Production</h3>
+                  </div>
+                  <p class="text-base sm:text-lg text-gray-300 mb-6">Behind the camera expertise in creating compelling visual content and bringing creative visions to life.</p>
+                  <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-video text-orange-400"></i><span class="text-white text-sm sm:text-base">Director</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-clapperboard text-orange-400"></i><span class="text-white text-sm sm:text-base">Producer</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-cut text-orange-400"></i><span class="text-white text-sm sm:text-base">Editor</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BROADCASTING -->
+          <div class="w-full flex-shrink-0">
+            <div class="glass-effect rounded-3xl p-6 sm:p-8 mx-2 sm:mx-4">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                <div class="text-center">
+                  <a href="https://soundcloud.com/" target="_blank">
+                    <div class="mx-auto max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]">
+                      <img src="images/broadcast.png" alt="Broadcasting Talent" class="w-full h-auto object-contain drop-shadow-2xl">
+                    </div>
+                  </a>
+                </div>
+                <div class="text-center lg:text-left">
+                  <div class="flex items-center justify-center lg:justify-start mb-6">
+                    <i class="fas fa-broadcast-tower text-green-400 text-4xl sm:text-5xl mr-3 pulse-glow"></i>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white">Broadcasting</h3>
+                  </div>
+                  <p class="text-base sm:text-lg text-gray-300 mb-6">Connecting with audiences through radio, television, and digital media platforms with engaging content.</p>
+                  <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-radio text-green-400"></i><span class="text-white text-sm sm:text-base">Radio Host</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-podcast text-green-400"></i><span class="text-white text-sm sm:text-base">Interviews</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-tv text-green-400"></i><span class="text-white text-sm sm:text-base">TV Appearances</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- COMEDY -->
+          <div class="w-full flex-shrink-0">
+            <div class="glass-effect rounded-3xl p-6 sm:p-8 mx-2 sm:mx-4">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                <div class="text-center">
+                  <a href="https://tiktok.com/" target="_blank">
+                    <div class="mx-auto max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]">
+                      <img src="images/comedy.png" alt="Comedy Talent" class="w-full h-auto object-contain drop-shadow-2xl">
+                    </div>
+                  </a>
+                </div>
+                <div class="text-center lg:text-left">
+                  <div class="flex items-center justify-center lg:justify-start mb-6">
+                    <i class="fas fa-masks-theater text-pink-400 text-4xl sm:text-5xl mr-3 pulse-glow"></i>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white">Comedy</h3>
+                  </div>
+                  <p class="text-base sm:text-lg text-gray-300 mb-6">Spreading joy and laughter through witty humor and relatable comedy that resonates with diverse audiences.</p>
+                  <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-laugh-squint text-pink-400"></i><span class="text-white text-sm sm:text-base">Stand-up Comedy</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-video text-pink-400"></i><span class="text-white text-sm sm:text-base">Comedy Skits</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-users text-pink-400"></i><span class="text-white text-sm sm:text-base">Entertainment Shows</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTENT CREATION -->
+          <div class="w-full flex-shrink-0">
+            <div class="glass-effect rounded-3xl p-6 sm:p-8 mx-2 sm:mx-4">
+              <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-center">
+                <div class="text-center">
+                  <a href="https://instagram.com/" target="_blank">
+                    <div class="mx-auto max-w-[280px] sm:max-w-[320px] lg:max-w-[350px]">
+                      <img src="images/content.png" alt="Content Creation Talent" class="w-full h-auto object-contain drop-shadow-2xl">
+                    </div>
+                  </a>
+                </div>
+                <div class="text-center lg:text-left">
+                  <div class="flex items-center justify-center lg:justify-start mb-6">
+                    <i class="fas fa-camera text-indigo-400 text-4xl sm:text-5xl mr-3 pulse-glow"></i>
+                    <h3 class="text-3xl sm:text-4xl font-bold text-white">Content Creation</h3>
+                  </div>
+                  <p class="text-base sm:text-lg text-gray-300 mb-6">Crafting engaging digital content that connects with modern audiences across social media platforms.</p>
+                  <div class="grid grid-cols-2 gap-3 sm:gap-4">
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-mobile-alt text-indigo-400"></i><span class="text-white text-sm sm:text-base">Social Media</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-play text-indigo-400"></i><span class="text-white text-sm sm:text-base">Video Content</span></div>
+                    <div class="flex items-center space-x-2 bg-white bg-opacity-10 rounded-xl p-3"><i class="fas fa-hashtag text-indigo-400"></i><span class="text-white text-sm sm:text-base">Viral Content</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Arrows -->
+      <button id="talent-prev" class="absolute left-2 sm:left-4 top-1/2 -translate-y-1/2 w-10 sm:w-14 h-10 sm:h-14 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center text-white text-lg sm:text-xl transition-all hover:scale-110 z-10">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button id="talent-next" class="absolute right-2 sm:right-4 top-1/2 -translate-y-1/2 w-10 sm:w-14 h-10 sm:h-14 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full flex items-center justify-center text-white text-lg sm:text-xl transition-all hover:scale-110 z-10">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+
+      <!-- Indicators -->
+      <div class="flex justify-center mt-6 space-x-2 sm:space-x-3">
+        <button class="talent-indicator w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all hover:scale-125" data-slide="0"></button>
+        <button class="talent-indicator w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all hover:scale-125" data-slide="1"></button>
+        <button class="talent-indicator w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all hover:scale-125" data-slide="2"></button>
+        <button class="talent-indicator w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all hover:scale-125" data-slide="3"></button>
+        <button class="talent-indicator w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all hover:scale-125" data-slide="4"></button>
+        <button class="talent-indicator w-3 h-3 sm:w-4 sm:h-4 rounded-full bg-white bg-opacity-50 hover:bg-opacity-100 transition-all hover:scale-125" data-slide="5"></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Media Section -->
+    <section id="media" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-5xl font-bold text-white mb-6">Media & Music</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300">Experience G-one's artistry across all platforms</p>
+            </div>
+            
+            
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- YouTube Embed -->
+<div class="section-reveal">
+    <div class="glass-effect rounded-3xl p-8">
+        <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+            <i class="fab fa-youtube text-red-500 mr-3"></i>
+            Latest Videos
+        </h3>
+
+        <!-- YouTube Embed Player -->
+        <div class="aspect-video rounded-2xl overflow-hidden shadow-2xl">
+            <iframe 
+                width="100%" 
+                height="100%" 
+                src="https://www.youtube.com/embed/videoseries?list=UU1H1P5KMMnnsnrxN8B5qWFA" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <p class="text-gray-300 mt-4 text-center">
+            <a href="https://www.youtube.com/@GOneSollyMakamu" target="_blank" 
+               class="text-red-400 hover:text-red-500 font-semibold">
+               Subscribe
+            </a> to stay updated with the latest content!
+        </p>
+    </div>
+</div>
+
+                
+                <!-- Music Streaming -->
+                <div class="section-reveal">
+                    <div class="glass-effect rounded-3xl p-8">
+                        <h3 class="text-2xl font-bold text-white mb-6 flex items-center">
+                            <i class="fas fa-headphones text-purple-400 mr-3"></i>
+                            Stream My Music
+                        </h3>
+                        
+                        <div class="space-y-4">
+                            <!-- Spotify -->
+                            <a href="https://open.spotify.com/artist/1M1b0faWqjVoSHa8wheRpF?si=TP6PaCO6TEeq-3Gw0xHakA target="_blank" class="flex items-center p-4 bg-green-600 rounded-2xl hover:bg-green-700 transition-all transform hover:scale-105">
+                                <i class="fab fa-spotify text-2xl mr-4"></i>
+                                <div>
+                                    <div class="font-semibold">Spotify</div>
+                                    <div class="text-sm opacity-80">Stream on Spotify</div>
+                                </div>
+                                <i class="fas fa-external-link-alt ml-auto"></i>
+                            </a>
+                            
+                            <!-- Apple Music -->
+                            <a href="https://music.apple.com/ca/artist/solly-makamu/1536504169" target="_blank" class="flex items-center p-4 bg-gray-800 rounded-2xl hover:bg-gray-700 transition-all transform hover:scale-105">
+                                <i class="fab fa-apple text-2xl mr-4"></i>
+                                <div>
+                                    <div class="font-semibold">Apple Music</div>
+                                    <div class="text-sm opacity-80">Listen on Apple Music</div>
+                                </div>
+                                <i class="fas fa-external-link-alt ml-auto"></i>
+                            </a>
+                            
+                            <!-- YouTube Music -->
+                            <a href="https://music.youtube.com/channel/gone" target="_blank" class="flex items-center p-4 bg-red-600 rounded-2xl hover:bg-red-700 transition-all transform hover:scale-105">
+                                <i class="fab fa-youtube text-2xl mr-4"></i>
+                                <div>
+                                    <div class="font-semibold">YouTube Music</div>
+                                    <div class="text-sm opacity-80">Play on YouTube Music</div>
+                                </div>
+                                <i class="fas fa-external-link-alt ml-auto"></i>
+                            </a>
+                            
+                            <!-- SoundCloud -->
+                            <a href="https://soundcloud.com/gone-makhense" target="_blank" class="flex items-center p-4 bg-orange-600 rounded-2xl hover:bg-orange-700 transition-all transform hover:scale-105">
+                                <i class="fab fa-soundcloud text-2xl mr-4"></i>
+                                <div>
+                                    <div class="font-semibold">SoundCloud</div>
+                                    <div class="text-sm opacity-80">Discover on SoundCloud</div>
+                                </div>
+                                <i class="fas fa-external-link-alt ml-auto"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Media Grid -->
+            <div class="mt-16 section-reveal">
+                <h3 class="text-3xl font-bold text-white text-center mb-8">Follow the Journey</h3>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/p/G-one-Solly-Makamu-100043917829868/?_rdr" target="_blank" class="glass-effect p-6 rounded-2xl hover:bg-blue-600 hover:bg-opacity-20 transition-all transform hover:scale-105">
+                        <div class="text-center">
+                            <i class="fab fa-facebook text-4xl text-blue-500 mb-4"></i>
+                            <h4 class="text-xl font-semibold text-white mb-2">Facebook</h4>
+                            <p class="text-gray-300 text-sm">Connect and get updates</p>
+                        </div>
+                    </a>
+                    
+                    <!-- TikTok -->
+                    <a href="https://www.tiktok.com/discover/solly-makamu?" target="_blank" class="glass-effect p-6 rounded-2xl hover:bg-gray-800 hover:bg-opacity-50 transition-all transform hover:scale-105">
+                        <div class="text-center">
+                            <i class="fab fa-tiktok text-4xl text-white mb-4"></i>
+                            <h4 class="text-xl font-semibold text-white mb-2">TikTok</h4>
+                            <p class="text-gray-300 text-sm">Short videos & entertainment</p>
+                        </div>
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/gonesollymakamu/?hl=en" target="_blank" class="glass-effect p-6 rounded-2xl hover:bg-gradient-to-r hover:from-purple-500 hover:to-pink-500 hover:bg-opacity-20 transition-all transform hover:scale-105">
+                        <div class="text-center">
+                            <i class="fab fa-instagram text-4xl text-pink-500 mb-4"></i>
+                            <h4 class="text-xl font-semibold text-white mb-2">Instagram</h4>
+                            <p class="text-gray-300 text-sm">Behind the scenes content</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recognition Section -->
+    <section id="recognition" class="py-20 bg-gradient-to-r from-yellow-900 to-orange-900 relative">
+        <div class="absolute inset-0 bg-black bg-opacity-30"></div>
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-5xl font-bold text-white mb-6">Recognition & Awards</h2>
+                <div class="w-24 h-1 bg-yellow-400 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-200">Celebrating excellence and cultural contribution</p>
+            </div>
+            
+            <div class="glass-effect rounded-3xl p-12 section-reveal">
+                <div class="text-center">
+                    <div class="w-32 h-32 mx-auto bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full flex items-center justify-center text-white text-5xl mb-8 pulse-glow">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3 class="text-4xl font-bold text-white mb-8">Best Songwriter Award</h3>
+                    <div class="max-w-4xl mx-auto">
+                        <p class="text-2xl text-gray-200 mb-8">
+                            Honored by the <span class="text-yellow-400 font-bold">Department of Sports, Arts & Culture</span> as the <span class="text-yellow-400 font-bold">"Best Songwriter"</span>
+                        </p>
+                        <div class="bg-white bg-opacity-10 rounded-3xl p-8 mb-8">
+                            <div class="flex items-center justify-center space-x-6 mb-6">
+    <div class="w-16 h-16 rounded-2xl flex items-center justify-center overflow-hidden">
+        <img src="images/gov.png" alt="Government Logo" class="w-full h-full object-cover">
+    </div>
+    <div class="text-left">
+        <p class="text-xl font-bold text-white">Department of Sports, Arts & Culture</p>
+        <p class="text-gray-300">South African Government</p>
+    </div>
+</div>
+
+                            <div class="border-t border-white border-opacity-20 pt-6">
+                                <p class="text-lg font-semibold text-white mb-3">Award Date</p>
+                                <p class="text-3xl font-bold text-yellow-400">February 26, 2022</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 text-lg italic">
+                            This prestigious recognition highlights G-one's exceptional contribution to South African music and songwriting, particularly in promoting Xitsonga culture through his artistic work.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-5xl font-bold text-white mb-6">Get In Touch</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300">Ready to collaborate or book G-one for your next event?</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div class="section-reveal">
+                    <div class="glass-effect rounded-3xl p-8">
+                        <h3 class="text-3xl font-bold text-white mb-8">Connect With G-one</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center pulse-glow">
+                                    <i class="fas fa-map-marker-alt text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-white text-lg">Location</p>
+                                    <p class="text-gray-300">Mdabula Village, Malamulele, Limpopo</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center pulse-glow">
+                                    <i class="fas fa-star text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-white text-lg">Available For</p>
+                                    <p class="text-gray-300">Music performances, Acting roles, Comedy shows & skits, Event hosting, Radio shows, Interviews, Motivational speaking</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-14 h-14 bg-purple-600 rounded-full flex items-center justify-center pulse-glow">
+                                    <i class="fas fa-globe text-xl"></i>
+                                </div>
+                                <div>
+                                    <p class="font-semibold text-white text-lg">Cultural Focus</p>
+                                    <p class="text-gray-300">Promoting Xitsonga heritage through entertainment</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Quick Contact Buttons -->
+                        <div class="mt-8 space-y-4">
+                            <a href="mailto:contact@gone-makhense.com" class="flex items-center justify-center w-full p-4 glass-effect rounded-2xl hover:bg-white hover:bg-opacity-10 transition-all">
+                                <i class="fas fa-envelope mr-3"></i>
+                                <span>Email G-one</span>
+                            </a>
+                            <a href="tel:+27123456789" class="flex items-center justify-center w-full p-4 glass-effect rounded-2xl hover:bg-white hover:bg-opacity-10 transition-all">
+                                <i class="fas fa-phone mr-3"></i>
+                                <span>Call for Bookings</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section-reveal">
+                    <div class="glass-effect rounded-3xl p-8">
+                        <h3 class="text-3xl font-bold text-white mb-8">Booking Inquiry</h3>
+                                  <form id="wa-form" class="space-y-6">
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Name</label>
+              <input type="text" id="wa-name" class="w-full px-4 py-3 bg-gray-800 bg-opacity-50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-white" placeholder="Your name">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Service Needed</label>
+              <select id="wa-service" class="w-full px-4 py-3 bg-gray-800 bg-opacity-50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-white">
+                <option>Music Performance</option>
+                <option>Acting Role</option>
+                <option>Comedy Show</option>
+                <option>Comedy Skits</option>
+                <option>Event Hosting/MC</option>
+                <option>Radio Show Appearance</option>
+                <option>Interview/Podcast</option>
+                <option>Motivational Speaking</option>
+                <option>Music Production</option>
+                <option>Content Creation</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-gray-300 mb-2">Message</label>
+              <textarea id="wa-message" rows="4" class="w-full px-4 py-3 bg-gray-800 bg-opacity-50 rounded-2xl focus:outline-none focus:ring-2 focus:ring-purple-500 text-white" placeholder="Tell us about your project or event..."></textarea>
+            </div>
+            <button type="button" onclick="sendWhatsApp()" class="w-full bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-6 py-4 rounded-2xl font-semibold transition-all transform hover:scale-105">
+              Send via WhatsApp <i class="fab fa-whatsapp ml-2"></i>
+            </button>
+          </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modern Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-purple-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-pink-500 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/3 w-24 h-24 bg-blue-500 rounded-full blur-2xl"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <!-- Main Footer Content -->
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-4 mb-6">
+    <img src="images/logo.png" alt="G-one Logo" class="w-16 h-16 rounded-2xl shadow-lg">
+    <div>
+        <div class="text-2xl font-bold text-white">G-one (Makhense)</div>
+        <div class="text-gray-400">Solly Makamu</div>
+    </div>
+</div>
+
+                    <p class="text-gray-300 text-lg mb-6 max-w-md">
+                        Multi-talented entertainer from Mdabula Village, bringing Xitsonga culture to the world stage through music, comedy, and performance.
+                    </p>
+                    <div class="flex items-center space-x-3 text-gray-400 mb-4">
+                        <i class="fas fa-map-marker-alt text-purple-400"></i>
+                        <span>Mdabula Village, Malamulele, Limpopo</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <i class="fas fa-award text-yellow-400"></i>
+                        <span>Best Songwriter Award Winner 2022</span>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="#home" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center"><i class="fas fa-home w-4 mr-2"></i>Home</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center"><i class="fas fa-user w-4 mr-2"></i>About</a></li>
+                        <li><a href="#talents" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center"><i class="fas fa-star w-4 mr-2"></i>Talents</a></li>
+                        <li><a href="media.html" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center"><i class="fas fa-play w-4 mr-2"></i>Media</a></li>
+                        <li><a href="#recognition" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center"><i class="fas fa-trophy w-4 mr-2"></i>Awards</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center"><i class="fas fa-envelope w-4 mr-2"></i>Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Services</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-400 flex items-center"><i class="fas fa-music text-purple-400 w-4 mr-2"></i>Music Performance</li>
+                        <li class="text-gray-400 flex items-center"><i class="fas fa-theater-masks text-purple-400 w-4 mr-2"></i>Acting & Comedy</li>
+                        <li class="text-gray-400 flex items-center"><i class="fas fa-microphone text-purple-400 w-4 mr-2"></i>Event Hosting</li>
+                        <li class="text-gray-400 flex items-center"><i class="fas fa-film text-purple-400 w-4 mr-2"></i>Content Creation</li>
+                        <li class="text-gray-400 flex items-center"><i class="fas fa-radio text-purple-400 w-4 mr-2"></i>Radio Shows</li>
+                        <li class="text-gray-400 flex items-center"><i class="fas fa-bullhorn text-purple-400 w-4 mr-2"></i>Speaking Events</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Social Media Section -->
+            <div class="border-t border-gray-800 pt-8 mb-8">
+                <div class="text-center mb-8">
+                    <h3 class="text-2xl font-bold text-white mb-4">Follow the Journey</h3>
+                    <p class="text-gray-400 mb-6">Stay connected for the latest updates and content</p>
+                </div>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <a href="https://www.youtube.com/@GOneSollyMakamu" target="_blank" class="group flex items-center space-x-3 bg-red-600 hover:bg-red-700 px-6 py-3 rounded-2xl transition-all transform hover:scale-105">
+                        <i class="fab fa-youtube text-xl"></i>
+                        <span class="font-medium">YouTube</span>
+                        <i class="fas fa-external-link-alt text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                    <a href="https://www.facebook.com/p/G-one-Solly-Makamu-100043917829868/?_rdr" target="_blank" class="group flex items-center space-x-3 bg-blue-600 hover:bg-blue-700 px-6 py-3 rounded-2xl transition-all transform hover:scale-105">
+                        <i class="fab fa-facebook text-xl"></i>
+                        <span class="font-medium">Facebook</span>
+                        <i class="fas fa-external-link-alt text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/discover/solly-makamu?" target="_blank" class="group flex items-center space-x-3 bg-gray-800 hover:bg-gray-700 px-6 py-3 rounded-2xl transition-all transform hover:scale-105">
+                        <i class="fab fa-tiktok text-xl"></i>
+                        <span class="font-medium">TikTok</span>
+                        <i class="fas fa-external-link-alt text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                    <a href="https://open.spotify.com/artist/1M1b0faWqjVoSHa8wheRpF?si=TP6PaCO6TEeq-3Gw0xHakA target="_blank" class="group flex items-center space-x-3 bg-green-600 hover:bg-green-700 px-6 py-3 rounded-2xl transition-all transform hover:scale-105">
+                        <i class="fab fa-spotify text-xl"></i>
+                        <span class="font-medium">Spotify</span>
+                        <i class="fas fa-external-link-alt text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                    <a href="https://music.apple.com/ca/artist/solly-makamu/1536504169" target="_blank" class="group flex items-center space-x-3 bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-2xl transition-all transform hover:scale-105">
+                        <i class="fab fa-apple text-xl"></i>
+                        <span class="font-medium">Apple Music</span>
+                        <i class="fas fa-external-link-alt text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gonesollymakamu/?hl=en" target="_blank" class="group flex items-center space-x-3 bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 px-6 py-3 rounded-2xl transition-all transform hover:scale-105">
+                        <i class="fab fa-instagram text-xl"></i>
+                        <span class="font-medium">Instagram</span>
+                        <i class="fas fa-external-link-alt text-sm opacity-0 group-hover:opacity-100 transition-opacity"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- YouTube Subscribe -->
+<div class="bg-gradient-to-r from-purple-900/30 to-pink-900/30 rounded-3xl p-8 mb-8 border border-purple-500/20">
+  <div class="text-center">
+    <h3 class="text-2xl font-bold text-white mb-4">Subscribe on YouTube</h3>
+    <p class="text-gray-300 mb-6">Join the G-One community and never miss a new release!</p>
+    
+    <a href="https://www.youtube.com/@GOneSollyMakamu" target="_blank"
+       class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-red-600 hover:bg-red-700 rounded-2xl font-semibold text-white text-lg transition-all transform hover:scale-105 shadow-lg">
+      <i class="fab fa-youtube text-2xl"></i>
+      Subscribe
+    </a>
+  </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <div class="text-gray-500 text-center md:text-left">
+                        <p>&copy; 2024 G-one (Makhense) - Solly Makamu. All rights reserved.</p>
+                        <p class="text-sm mt-1">Proudly representing Xitsonga culture worldwide 🇿🇦</p>
+                    </div>
+                    <div class="flex items-center space-x-6 text-sm text-gray-500">
+                        <a href="#" class="hover:text-purple-400 transition-colors">Privacy Policy</a>
+                        <a href="#" class="hover:text-purple-400 transition-colors">Terms of Service</a>
+                        <a href="#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile sidebar menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileSidebar = document.getElementById('mobile-sidebar');
+        const closeSidebar = document.getElementById('close-sidebar');
+        const sidebarBackdrop = document.getElementById('sidebar-backdrop');
+        const sidebarLinks = document.querySelectorAll('.sidebar-link');
+
+        function openSidebar() {
+            mobileSidebar.classList.remove('translate-x-full');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeSidebarMenu() {
+            mobileSidebar.classList.add('translate-x-full');
+            document.body.style.overflow = '';
+        }
+
+        mobileMenuBtn.addEventListener('click', openSidebar);
+        closeSidebar.addEventListener('click', closeSidebarMenu);
+        sidebarBackdrop.addEventListener('click', closeSidebarMenu);
+
+        // Close sidebar when clicking on navigation links
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', closeSidebarMenu);
+        });
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    document.getElementById('mobile-menu').classList.add('hidden');
+                }
+            });
+        });
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Parallax effect
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.parallax-element');
+            
+            parallaxElements.forEach(element => {
+                const speed = element.dataset.speed || 0.5;
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Reveal sections on scroll
+        function revealSections() {
+            const reveals = document.querySelectorAll('.section-reveal');
+            
+            reveals.forEach(reveal => {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveal.getBoundingClientRect().top;
+                const elementVisible = 100;
+                
+                if (elementTop < windowHeight - elementVisible) {
+                    reveal.classList.add('visible');
+                }
+            });
+        }
+
+        revealSections();
+        window.addEventListener('scroll', revealSections);
+
+        // Active navigation highlighting
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            navLinks.forEach(link => {
+                link.classList.remove('text-purple-400');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('text-purple-400');
+                }
+            });
+        });
+
+        // Enhanced Hero slideshow functionality
+        let currentHeroSlide = 0;
+        const heroSlides = document.querySelectorAll('.hero-slide');
+        const heroBgSlides = document.querySelectorAll('.hero-bg-slide');
+        const slideshowDots = document.querySelectorAll('.slideshow-dot');
+        const slideLabels = ['Performance', 'Studio', 'Comedy', 'Interview', 'Acting'];
+
+        function showHeroSlide(index) {
+            // Update circular slides
+            heroSlides.forEach((slide, i) => {
+                slide.classList.toggle('opacity-0', i !== index);
+                slide.classList.toggle('active', i === index);
+            });
+            
+            // Update background slides
+            heroBgSlides.forEach((slide, i) => {
+                slide.classList.toggle('opacity-0', i !== index);
+                slide.classList.toggle('active', i === index);
+            });
+            
+            slideshowDots.forEach((dot, i) => {
+                dot.classList.toggle('bg-opacity-100', i === index);
+                dot.classList.toggle('bg-opacity-50', i !== index);
+            });
+
+            // Update slide label
+            const slideLabel = document.getElementById('slide-label');
+            if (slideLabel) {
+                slideLabel.textContent = slideLabels[index] || 'Performance';
+            }
+        }
+
+        function nextHeroSlide() {
+            currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+            showHeroSlide(currentHeroSlide);
+        }
+
+        function prevHeroSlide() {
+            currentHeroSlide = (currentHeroSlide - 1 + heroSlides.length) % heroSlides.length;
+            showHeroSlide(currentHeroSlide);
+        }
+
+        function setHeroSlide(index) {
+            currentHeroSlide = index;
+            showHeroSlide(currentHeroSlide);
+        }
+
+        // Hero slider navigation
+        document.getElementById('hero-next').addEventListener('click', nextHeroSlide);
+        document.getElementById('hero-prev').addEventListener('click', prevHeroSlide);
+
+        // Auto-advance slideshow every 4 seconds
+        setInterval(nextHeroSlide, 4000);
+
+        // Initialize first slide
+        showHeroSlide(0);
+
+        
+
+        // Add some interactive elements
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add cursor trail effect
+            let mouseX = 0, mouseY = 0;
+            let trailX = 0, trailY = 0;
+
+            document.addEventListener('mousemove', function(e) {
+                mouseX = e.clientX;
+                mouseY = e.clientY;
+            });
+
+            function animateTrail() {
+                trailX += (mouseX - trailX) * 0.1;
+                trailY += (mouseY - trailY) * 0.1;
+                
+                requestAnimationFrame(animateTrail);
+            }
+            
+            animateTrail();
+        });
+    </script>
+    <script>
+        // Talent Slider functionality (Fixed)
+        let currentTalentSlide = 0;
+        const totalTalentSlides = 3; // Updated to match the number of slides
+        const talentSlider = document.getElementById('talent-slider');
+        const talentIndicators = document.querySelectorAll('.talent-indicator');
+
+        function showTalentSlide(index) {
+            const translateX = -index * 100;
+            talentSlider.style.transform = `translateX(${translateX}%)`;
+            
+            // Update indicators
+            talentIndicators.forEach((indicator, i) => {
+                indicator.classList.toggle('bg-opacity-100', i === index);
+                indicator.classList.toggle('bg-opacity-50', i !== index);
+            });
+        }
+
+        function nextTalentSlide() {
+            currentTalentSlide = (currentTalentSlide + 1) % totalTalentSlides;
+            showTalentSlide(currentTalentSlide);
+        }
+
+        function prevTalentSlide() {
+            currentTalentSlide = (currentTalentSlide - 1 + totalTalentSlides) % totalTalentSlides;
+            showTalentSlide(currentTalentSlide);
+        }
+
+        // Event listeners for talent slider
+        document.getElementById('talent-next').addEventListener('click', nextTalentSlide);
+        document.getElementById('talent-prev').addEventListener('click', prevTalentSlide);
+
+        // Indicator click handlers
+        talentIndicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentTalentSlide = index;
+                showTalentSlide(currentTalentSlide);
+            });
+        });
+
+        // Auto-advance talent slider every 6 seconds
+        setInterval(nextTalentSlide, 6000);
+
+        // Initialize talent slider
+        showTalentSlide(0);
+    </script>
+
+    <!-- WhatsApp helper -->
+<script>
+function sendWhatsApp() {
+  const name    = encodeURIComponent(document.getElementById('wa-name').value || 'Client');
+  const service = encodeURIComponent(document.getElementById('wa-service').value);
+  const message = encodeURIComponent(document.getElementById('wa-message').value);
+  const text    = `Hi G-one, my name is ${name}. I would like to book you for ${service}.%0A%0A${message}`;
+  window.open(`https://wa.me/27839589310?text=${text}`, '_blank');
+}
+</script>
+
+    <script>
+/* --------- BACKGROUND SLIDER (desktop & mobile) --------- */
+const desktopSlides = document.querySelectorAll('#hero-bg-desktop .hero-bg-slide');
+const mobileSlides  = document.querySelectorAll('#hero-bg-mobile .hero-bg-slide');
+const slides = window.innerWidth >= 768 ? desktopSlides : mobileSlides;
+let bgCurrent = 0;
+
+function showBgSlide(index) {
+  slides.forEach((s, i) => s.classList.toggle('opacity-0', i !== index));
+}
+function nextBgSlide() {
+  bgCurrent = (bgCurrent + 1) % slides.length;
+  showBgSlide(bgCurrent);
+}
+function prevBgSlide() {
+  bgCurrent = (bgCurrent - 1 + slides.length) % slides.length;
+  showBgSlide(bgCurrent);
+}
+
+/* auto-cycle every 5 s */
+setInterval(nextBgSlide, 5000);
+showBgSlide(0);
+</script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9752fff9a264517e',t:'MTc1NjIwNzg1NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
