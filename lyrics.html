@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HIV MAKHENSE PAGE 10 – Lyrics | G-One</title>
+    <title>HIV MAKHENSE PAGE 10 – Full Album Lyrics | G-One</title>
     <link rel="icon" type="image/png" href="images/face.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,19 +11,11 @@
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         *{font-family:'Inter',sans-serif}
         body{background:#111827;color:#f3f4f6}
-        .glass{
-            background:rgba(255,255,255,.08);
-            backdrop-filter:blur(12px);
-            border:1px solid rgba(255,255,255,.1);
-            border-radius:1.25rem;
-        }
-        /* hide all blocks by default */
-        .lyric-block{display:none;}
-        /* visible state */
-        .lyric-block.active{display:block;}
-        /* little animation */
-        @keyframes fadeIn{from{opacity:0;transform:translateY 20px}to{opacity:1;transform:translateY 0}}
-        .lyric-block.active{animation:fadeIn .4s ease forwards;}
+        .glass{background:rgba(255,255,255,.08);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.1);border-radius:1.25rem}
+        .lyric-block{display:none}
+        .lyric-block.active{display:block;animation:fade .4s ease}
+        @keyframes fade{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+        html{scroll-behavior:smooth}
     </style>
 </head>
 <body class="bg-gray-900">
@@ -44,35 +36,40 @@
     </div>
 </nav>
 
-<!-- =========  ALBUM HERO  ========= -->
+<!-- =========  HERO  ========= -->
 <section class="pt-32 pb-12 px-4 text-center">
-    <img id="album-cover" src="images/cover10.jpg" alt="HIV MAKHENSE PAGE 10" class="w-52 h-52 mx-auto rounded-2xl shadow-2xl border-4 border-purple-500">
+    <img src="images/cover10.jpg" alt="HIV MAKHENSE PAGE 10" class="w-52 h-52 mx-auto rounded-2xl shadow-2xl border-4 border-purple-500">
     <h1 class="text-5xl font-extrabold text-white mt-6">HIV MAKHENSE PAGE 10</h1>
     <p class="text-gray-300 mt-2">Click any track to reveal lyrics & streaming links</p>
 
-    <!-- TRACK LIST -->
+    <!-- Track-list navigator -->
     <div class="mt-8 flex flex-wrap justify-center gap-3 text-sm">
         <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="01">01 Waahoo</button>
         <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="02">02 Ndhwalo</button>
-        <!-- add more here when ready -->
+        <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="03">03 Gandaganda</button>
+        <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="04">04 Nkunghweni</button>
+        <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="05">05 Mali Yo Khendla</button>
+        <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="06">06 Mbilu Ya Borha</button>
+        <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="07">07 Vazalwana</button>
+        <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="08">08 N'winyi Wa Filimi</button>
+        <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="09">09 Major General</button>
+        <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="10">10 Vutomi Bya Khale</button>
+        <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="11">11 Nyimpi Ya Mavenda</button>
+        <button class="track-btn glass px-4 py-2 rounded-full hover:border-purple-400" data-track="12">12 Mabodlele</button>
     </div>
 </section>
 
-<!-- =========  DYNAMIC CONTENT AREA  ========= -->
-<section class="px-4 pb-24 max-w-5xl mx-auto">
+<!-- =========  DYNAMIC CONTENT  ========= -->
+<section class="px-4 pb-24 max-w-5xl mx-auto space-y-16">
 
-    <!-- ===== 01 WAAHOO ===== -->
+    <!-- 01 WAAHOO -->
     <div id="track-01" class="lyric-block space-y-6">
-        <!-- single-track embeds -->
         <div class="grid md:grid-cols-3 gap-4">
             <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/waahoo/1857388708"></iframe></div>
             <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/84qtLEKOROo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
             <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/3oO2GQOOqdWBzIZg4atHCk?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
         </div>
-        <!-- lyrics -->
-        <div class="glass p-6 md:p-8">
-            <h2 class="text-2xl font-bold text-purple-400 mb-4">01. WAAHOO</h2>
-            <pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">Hotwa u ta hlupheka ninga n'u tshika mina.....
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">01. WAAHOO</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">Hotwa u ta hlupheka ninga n'u tshika mina.....
 Veri ni ta hlupheka va nga ni tshika Vona!
 Veri ni ta hlupheka ninga tlanga hi vona
 Hotwa u khola ngopfu yita hela mali
@@ -382,22 +379,17 @@ Waahoo!!!!
 Se ni lovoli nsati,
 Swifamba ngopfu ninga tshika 
 
-Waahoo!!!!
-
-</pre>
-        </div>
+Waahoo!!!!</pre></div>
     </div>
 
-    <!-- ===== 02 NDHWALO ===== -->
+    <!-- 02 NDHWALO -->
     <div id="track-02" class="lyric-block space-y-6">
         <div class="grid md:grid-cols-3 gap-4">
             <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/ndhwalo/1857388870"></iframe></div>
             <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/wcDjNqzI4iQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
             <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7pmDEWZDUtMbybJPbGNZl7?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
         </div>
-        <div class="glass p-6 md:p-8">
-            <h2 class="text-2xl font-bold text-purple-400 mb-4">02. NDHWALO</h2>
-            <pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">Pfunani Malume Sideee
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">02. NDHWALO</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">Pfunani Malume Sideee
 Pfunani malume na tikeriwa
 
 Sizani Malume Majimee haa!!
@@ -627,18 +619,468 @@ Mara ndhwalo lowu i ndhwalo
 Kuza swivanga ndhwalo.
 
 Mara ndhwalo lowu i ndhwalo wona
-Kuza swivanga ndhwalo
-</pre>
-        </div>
+Kuza swivanga ndhwalo</pre></div>
     </div>
 
-    <!-- copy/paste this whole .lyric-block for 03, 04 … just change id, embed urls & title/lyrics -->
+    <!-- 03 GANDAGANDA -->
+    <div id="track-03" class="lyric-block space-y-6">
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/gandaganda/1857388872"></iframe></div>
+            <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/f2QTa4nyV7s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/6RNUzjF8M3AwGdBqd5v2J2?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">03. GANDAGANDA</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">…Gandaganda lyrics…</pre></div>
+    </div>
+
+    <!-- 04 NKUNGHWENI -->
+    <div id="track-04" class="lyric-block space-y-6">
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/nkunghweni/1857388875"></iframe></div>
+            <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/wv-fosOUdCg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1Ox16IVaBL8SOKfapBWtTE?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">04. NKUNGHWENI</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">He Madoda, ninge pfumeli
+Ku vuriwa xisiwana
+
+He Madoda, ninge pfumeli
+Ku vuriwa wo hlupheka
+
+Sweswo na Ala
+Ene ninge pfumeli 
+
+《Ku vuriwa Xisiwana》
+《A ni vuriwi xisiwana》
+
+
+Xisiwana xihava Qhondho
+Eeee - mina ani hluphekangi
+
+Nopfumala mpahla
+Mara ani hluphekangi 
+
+No va hava yindlu
+Mara ani hluphekangi 
+
+
+No pfumela Mali
+Mina ani hluphekangi 
+
+
+Lavo tlela, ka mabiloho 
+Hi vona swisiwana
+
+Lavo tlela a mapatwini 
+Hi vona swisiwana
+
+
+Xikwembu ni lava mali
+Se Papa mina va khalabya
+
+Jehovah ni biwa hi nkarhe
+Mhana mina va khegula....
+
+Muholo wa view once 
+A wu nge tsakisi mhana mina
+
+
+Ni lava mali na rihanyu 
+Matimba niketa lava lwela nuna
+
+Nilava mali no humelela
+Matimba nyiketa lavo rhandza nyipi
+
+Loko ni famba nkunghweni 
+Ndlela yita humelela
+
+Mapapa ya ta hangalaka
+
+Xikwembu xipfula ndlela
+
+Aswi bohi mina ni vona Joni
+Loko nifamba hi ti layiti
+
+Ntsena ni vona patu,
+Ndlela yita humelela 
+
+Swifumi niswi chuwhisini 
+Naha hlupheka
+Imagine loko no fumaa
+
+Nwi swifumi ni mi gwajisini
+Naha kayakaya 
+Eii loko no fuma kona
+
+《A ni vuriwi xisiwanaA》
+
+
+.
+.
+.
+.
+Hi rilela ku hanya, vanhu
+Hi tlhe hi rilisa hi ku hanya 
+
+Hi cemela vutomi, vanhu
+Hi tlhe hi cemisa hi vutome 
+
+Vatswari ahi chavi rifu,
+Ho puta ti dependent 
+
+《Mhane, swilo swa tika》
+《Hluphekweni, swilo swa tika》
+
+Loko supervisor, yihari hava mali
+Mi ri mina ninga humelela na?
+
+Mulungu a ri hava maleee
+Mi ri mina ninga humelela xana?
+
+Ni tlangela ku winner 
+Game ya mina ahi yona 
+Yo tlhuva nkarhi
+
+Ni hoxela ku popo 
+Dayizi leri a hi rona
+Ro tlhuva nkarhi
+
+
+Xikongomelo iku fuma mbava
+Hai ku endla onge nina mali
+
+Vusiwana ni byi venga ngopfu
+Ni hambene na lavaya
+
+Lavo ngeteriwa muhulo,
+Na vona va ngetela vanhwanyani
+
+Loko va tlakusa muholo 
+Na vona va ngetela swo dya mali
+
+Ene wansati wo kala mali, Veri u tiyile..
+Wanuna veri i xisiwana
+
+Vavanuna vo ti yimelo, 
+Mara ava vuriwi ku va independent 
+
+Niku mali hambi yo hlwela
+Ntsena yi fika kahle
+
+Ku humelela hiku hatlisa,
+Swiha rhisiti
+Vanhu votala vokhendla 
+
+Kuhumelela hi xipidi-pidi 
+Swihava xilipi 
+Vanhu votala mi na swilo
+
+N'wi vatsongo mi nga tsutsuma 
+Mi nga hatlisa,
+Mara ndlela yi tiva hi  khale
+
+Minga 'mind' ku nonokooo 
+Ni famba hi pace, 
+Ya mina
+
+Hambi no tshuka ni hlupheka mina
+Ni nga hlupheki xiZimbabwe 
+
+Ni lava ku hlupheka xiAmerica 
+Swo hlupheka nitlela movheni
+
+Eiii Vanhu hi N'wina,
+Minga tswariwa swiri kahle
+
+Vonani vanhu hi N'wina 
+Minga tiviku Vusiwana 
+
+He Ntsonani, vanhu hi N'wina
+Mi login ka Mkateko 
+
+Mi ta download rifumo sweswi 
+He hi log ka Vusiwana
+
+Mina ani lavi vudokodela 
+Pilot, kumbexani na vu loyara 
+
+'When I grow up' ya mina
+Ahi yona a ni lava yona leyi
+
+
+.
+.
+.
+.
+.
+Vulavula Jehovah 
+Niku twoo 
+
+I khale niku rindzerile 
+
+Loko Xikwembu xi Vulavula,
+Lavanwani se va twa kuri huwa Ntsena 
+
+Loko Xikwembu xi pfula nyangwa,
+Hambi mo kwata 
+Mi nge koti swi pfala sweswo
+
+《Hai Mali ayi fiki》
+《Ow Cheleni Nghena》
+
+
+Xikwembu ni nyiki mali
+Ni ta fikelela milorho yanga
+
+Katekisa vamakweru wa mina
+Na vona va kuma mali 
+
+Hosi katekisa na maxaka ya mina 
+Na vona vayendla mali
+
+Vanga tshameli ro kombelo,
+Ndhwalo hikwawo wu vuya ka mina
+
+A va endli mabindzunyana
+Na vo va kuma mali
+
+Uva pfuna na mihleketo
+Vaswivona kuri business,
+Mhayi ritlula ntirhoo
+
+
+Ka ti Banana na Mali
+Loko wo nyika tifenhe,
+Tita choose ti Banana,
+
+Ani Fenhe ayi switivi
+Ku hi mali yinga xava ti Banana
+
+Swifana na ma business 
+A hi switivi ku yanga hi nyika mali
+
+
+Vanwani vatshembi vatswari
+Hi hambanini, va vatswari vatshembi mina
+
+Van'wani va xava timovha,
+A va na support, 
+Hina hi na ti ndzisane 
+
+Van'wani va aka tiyindlu 
+Hi hambanini,
+Phela mina ni dyondzisa vana
+
+Ni rhandza vanhu vo fuma 
+Va ti tivaku, 
+Mara vanga kholeli vanhu 
+
+Ni lava ku fana na vona
+Ni nga kholeli vanhu
+
+
+Hiku Mali ya cinca 
+Mali ya cinca munhu 
+
+Na ndhuma ya cinca 
+Aaaa ndhuma ya cinca munhu
+
+Mali i sathani 
+Ooo yingani cinci papa 
+
+Hiku vanhu va khola
+Eee mali ya cinca vanhu 
+
+Hi tiva va ri na hlonipho
+Ee mali ya cinca munhu 
+
+Swinga endlekeli mina 
+Hiku mali ya cinca munhu 
+
+Xikwembu ni tlharihisi 
+Hiku mali ya cinca ya munh
+
+Ni dyondzisi ku khola mali
+Mara ninga jump'si 
+
+A ku vulavula mintirho 
+Mina ninga jump'si 
+
+Ku na wa mali, kuna wo fumo
+Mina nlava ku fuma 
+
+Lowa mali wotithemendhela 
+Hiku mintirho ayi vulavuli
+
+He vofuma hito miyela
+Hiku hi chava naku khutuziwa
+
+Nlaku fuma leswo nyenyetsaa</pre></div>
+    </div>
+
+    <!-- 05 MALI YO KHENDLA -->
+    <div id="track-05" class="lyric-block space-y-6">
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/mali-yo-khendla/1857388880"></iframe></div>
+            <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/8hKg2x61U6U" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5MGxPSXkzesnTd2VPJ5Z5k?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">05. MALI YO KHENDLA</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">…Mali Yo Khendla lyrics…</pre></div>
+    </div>
+
+    <!-- 06 MBILU YA BORHA -->
+    <div id="track-06" class="lyric-block space-y-6">
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/mbilu-ya-borha/1857388882"></iframe></div>
+            <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/u0sbwRCAb-M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/5pjknppZrFxJsMN16KQNVh?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">06. MBILU YA BORHA</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">…Mbilu Ya Borha lyrics…</pre></div>
+    </div>
+
+    <!-- 07 VAZALWANA -->
+    <div id="track-07" class="lyric-block space-y-6">
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/vazalwana/1857388886"></iframe></div>
+            <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/t_G7in1gG48" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2gJ1Kznzo23H6ZRgnR4jMY?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">07. VAZALWANA</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">…Vazalwana lyrics…</pre></div>
+    </div>
+
+    <!-- 08 N'WINYI WA FILIMI -->
+    <div id="track-08" class="lyric-block space-y-6">
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/nwinyi-wa-filimi/1857388889"></iframe></div>
+            <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/f_DbgRqJBes" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/2CKB9ciMvGHrgOo2g1xWNY?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">08. N'WINYI WA FILIMI</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">…N'winyi Wa Filimi lyrics…</pre></div>
+    </div>
+
+    <!-- 09 MAJOR GENERAL -->
+    <div id="track-09" class="lyric-block space-y-6">
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/major-general/1857388892"></iframe></div>
+            <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/Z9BL4iMgJq4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1vhZLJK1zw3CAwmHdDlEBk?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">09. MAJOR GENERAL</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">…Major General lyrics…</pre></div>
+    </div>
+
+    <!-- 10 VUTOMI BYA KHALE -->
+    <div id="track-10" class="lyric-block space-y-6">
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/vutomi-bya-khale/1857389168"></iframe></div>
+            <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/zXx6JUDTmr8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/00Ne4dt6qOFNtKSdoMncWr?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">10. VUTOMI BYA KHALE</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">…Vutomi Bya Khale lyrics…</pre></div>
+    </div>
+
+    <!-- 11 NYIMPI YA MAVENDA -->
+    <div id="track-11" class="lyric-block space-y-6">
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/nyimpi-ya-mavenda/1857389169"></iframe></div>
+            <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/MSqqIpUrVNg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/14ckGuLzA9lBuX5JWlZKQp?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">11. NYIMPI YA MAVENDA</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">…Nyimpi Ya Mavenda lyrics…</pre></div>
+    </div>
+
+    <!-- 12 MABODLELE -->
+    <div id="track-12" class="lyric-block space-y-6">
+        <div class="grid md:grid-cols-3 gap-4">
+            <div class="glass p-3"><iframe allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write" frameborder="0" height="175" style="width:100%;border-radius:10px" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation" src="https://embed.music.apple.com/za/song/mabodlele/1857389182"></iframe></div>
+            <div class="glass p-3"><iframe width="100%" height="175" src="https://www.youtube.com/embed/eO50-vw57CQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <div class="glass p-3"><iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/1rOmLvV7gkOq1cRr0ZW5YW?utm_source=generator" width="100%" height="175" frameborder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe></div>
+        </div>
+        <div class="glass p-6 md:p-8"><h2 class="text-2xl font-bold text-purple-400 mb-4">12. MABODLELE</h2><pre class="whitespace-pre-wrap text-gray-200 text-sm md:text-base">…Mabodlele lyrics…</pre></div>
+    </div>
 
 </section>
 
-<footer class="bg-black/50 text-gray-400 text-center py-6 text-sm">
-    © 2024 G-One (Makhense) – Solly Makamu.
-</footer>
+    <!-- Modern Footer -->
+    <footer class="bg-gradient-to-br from-gray-900 via-black to-gray-900 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <div class="absolute top-10 left-10 w-32 h-32 bg-purple-500 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 right-10 w-40 h-40 bg-pink-500 rounded-full blur-3xl"></div>
+            <div class="absolute top-1/2 left-1/3 w-24 h-24 bg-blue-500 rounded-full blur-2xl"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <!-- Main Footer Content -->
+            <div class="grid lg:grid-cols-4 md:grid-cols-2 gap-12 mb-12">
+                <!-- Brand Section -->
+                <div class="lg:col-span-2">
+                    <div class="flex items-center space-x-4 mb-6">
+    <img src="images/logo.png" alt="G-one Logo" class="w-16 h-16 rounded-2xl shadow-lg">
+    <div>
+        <div class="text-2xl font-bold text-white">G-One (Makhense)</div>
+        <div class="text-gray-400">Solly Makamu</div>
+    </div>
+</div>
+                    <p class="text-gray-300 text-lg mb-6 max-w-md">
+                        Multi-talented entertainer from Mdabula Village, bringing Xitsonga culture to the world stage through music, comedy, and performance.
+                    </p>
+                    <div class="flex items-center space-x-3 text-gray-400 mb-4">
+                        <i class="fas fa-map-marker-alt text-purple-400"></i>
+                        <span>Mdabula Village, Malamulele, Limpopo</span>
+                    </div>
+                    <div class="flex items-center space-x-3 text-gray-400">
+                        <i class="fas fa-award text-yellow-400"></i>
+                        <span>Best Songwriter Award Winner 2022</span>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Quick Links</h3>
+                    <ul class="space-y-3">
+                        <li><a href="index.html" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center"><i class="fas fa-home w-4 mr-2"></i>Home</a></li>
+                        <li><a href="index.html#about" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center"><i class="fas fa-user w-4 mr-2"></i>About</a></li>
+                        <li><a href="index.html#talents" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center"><i class="fas fa-star w-4 mr-2"></i>Talents</a></li>
+                        <li><a href="media.html" class="text-purple-400 font-medium flex items-center"><i class="fas fa-play w-4 mr-2"></i>Media</a></li>
+                        <li><a href="index.html#recognition" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center"><i class="fas fa-trophy w-4 mr-2"></i>Awards</a></li>
+                        <li><a href="index.html#contact" class="text-gray-400 hover:text-purple-400 transition-colors flex items-center"><i class="fas fa-envelope w-4 mr-2"></i>Contact</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Platforms -->
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6">Platforms</h3>
+                    <ul class="space-y-3">
+                        <li class="text-gray-400 flex items-center"><i class="fab fa-youtube text-red-500 w-4 mr-2"></i>YouTube</li>
+                        <li class="text-gray-400 flex items-center"><i class="fab fa-spotify text-green-500 w-4 mr-2"></i>Spotify</li>
+                        <li class="text-gray-400 flex items-center"><i class="fab fa-tiktok text-white w-4 mr-2"></i>TikTok</li>
+                        <li class="text-gray-400 flex items-center"><i class="fab fa-facebook text-blue-500 w-4 mr-2"></i>Facebook</li>
+                        <li class="text-gray-400 flex items-center"><i class="fab fa-apple text-gray-400 w-4 mr-2"></i>Apple Music</li>
+                        <li class="text-gray-400 flex items-center"><i class="fab fa-instagram text-pink-500 w-4 mr-2"></i>Instagram</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="border-t border-gray-800 pt-8">
+    <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+        <div class="text-gray-500 text-center md:text-left">
+            <p>&copy; 2024 G-One (Makhense) - Solly Makamu. All rights reserved.</p>
+            <p class="text-sm mt-1">Proudly representing Xitsonga culture worldwide 🇿🇦</p>
+            <p class="text-sm mt-2">Designed by 
+                <a href="https://www.valoyitech.co.za/" target="_blank" class="hover:text-purple-400 transition-colors">
+                    ValoyItech
+                </a>
+            </p>
+        </div>
+        <div class="flex items-center space-x-6 text-sm text-gray-500">
+            <a href="index.html#about" class="hover:text-purple-400 transition-colors">About</a>
+            <a href="media.html" class="hover:text-purple-400 transition-colors">Music & Gallery</a>
+            <a href="index.html#contact" class="hover:text-purple-400 transition-colors">Contact</a>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </footer>
 
 <script>
     /* ----- show chosen track + hide others ----- */
@@ -650,10 +1092,11 @@ Kuza swivanga ndhwalo
             const target = btn.dataset.track;
             blocks.forEach(b => b.classList.remove('active'));
             document.getElementById('track-' + target).classList.add('active');
+            document.getElementById('track-' + target).scrollIntoView({ behavior: 'smooth', block: 'start' });
         });
     });
 
-    /* auto-open first track on load (optional) */
+    /* auto-open first track on load */
     document.getElementById('track-01').classList.add('active');
 </script>
 
