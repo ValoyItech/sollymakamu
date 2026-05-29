@@ -391,7 +391,241 @@
                 transform: translateY(-5px) scale(1.01);
             }
         }
-    </style>
+    
+        /* Gallery Section Styles */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 220px;
+            gap: 1.5rem;
+            grid-auto-flow: dense;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+        .gallery-item.portrait {
+            grid-row: span 2;
+            grid-column: span 1;
+        }
+
+        .gallery-item.landscape {
+            grid-row: span 1;
+            grid-column: span 2;
+        }
+
+        .gallery-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            border-radius: 20px;
+            background: linear-gradient(145deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .gallery-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            border-color: rgba(102, 126, 234, 0.5);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.5), 0 0 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .gallery-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+            opacity: 0;
+            transition: all 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding-bottom: 2rem;
+        }
+
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .gallery-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(102, 126, 234, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .gallery-card:hover .gallery-icon {
+            transform: translateY(0);
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 80vh;
+            object-fit: contain;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        .lightbox-caption {
+            margin-top: 1rem;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: 500;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        .lightbox-close,
+        .lightbox-prev,
+        .lightbox-next {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+            border: 2px solid rgba(255,255,255,0.2);
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            z-index: 10;
+        }
+
+        .lightbox-close:hover,
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            background: rgba(102, 126, 234, 0.8);
+            border-color: rgba(102, 126, 234, 0.8);
+            transform: scale(1.1);
+        }
+
+        .lightbox-close {
+            top: 20px;
+            right: 20px;
+        }
+
+        .lightbox-prev {
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-next {
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lightbox-prev:hover,
+        .lightbox-next:hover {
+            transform: translateY(-50%) scale(1.1);
+        }
+
+        /* Responsive Gallery */
+        @media (max-width: 1024px) {
+            .gallery-grid {
+                grid-template-columns: repeat(3, 1fr);
+                grid-auto-rows: 180px;
+                gap: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .gallery-grid {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 160px;
+                gap: 0.75rem;
+            }
+
+            .gallery-item.portrait {
+                grid-row: span 2;
+            }
+
+            .gallery-item.landscape {
+                grid-column: span 2;
+            }
+
+            .lightbox-prev,
+            .lightbox-next {
+                width: 40px;
+                height: 40px;
+                font-size: 1rem;
+            }
+
+            .lightbox-prev { left: 10px; }
+            .lightbox-next { right: 10px; }
+        }
+
+        @media (max-width: 480px) {
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr;
+                grid-auto-rows: 140px;
+                gap: 0.5rem;
+            }
+
+            .gallery-item.landscape {
+                grid-column: span 2;
+            }
+        }
+
+</style>
+<base target="_blank">
 </head>
 <body class="bg-gray-900 text-white overflow-x-hidden">
     <!-- Navigation -->
@@ -610,7 +844,125 @@
                 </div>
             </div>
         </div>
+</section>
+
+
+    <!-- Branded Cars Gallery Section -->
+    <section id="gallery" class="py-20 bg-gray-900 relative overflow-hidden">
+        <!-- Subtle background accent -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute -top-20 -left-20 w-96 h-96 bg-purple-600 rounded-full opacity-5 blur-3xl"></div>
+            <div class="absolute -bottom-20 -right-20 w-96 h-96 bg-pink-600 rounded-full opacity-5 blur-3xl"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 section-reveal">
+                <h2 class="text-5xl font-bold text-white mb-6">Branded Fleet</h2>
+                <div class="w-24 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                    Solly Makamu's branded vehicles hitting the streets — promoting the G-One brand, music, and Xitsonga culture across South Africa.
+                </p>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid section-reveal" id="gallery-grid">
+                <!-- Portrait Images (1-6) -->
+                <div class="gallery-item portrait" data-caption="G-One branded patrol vehicle">
+                    <div class="gallery-card">
+                        <img src="images/photo1.jpg" alt="Solly Makamu branded car 1" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item portrait" data-caption="G-One street promotion vehicle">
+                    <div class="gallery-card">
+                        <img src="images/photo2.jpg" alt="Solly Makamu branded car 2" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item portrait" data-caption="G-One branded SUV">
+                    <div class="gallery-card">
+                        <img src="images/photo3.jpg" alt="Solly Makamu branded car 3" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item portrait" data-caption="G-One fleet on the road">
+                    <div class="gallery-card">
+                        <img src="images/photo4.jpg" alt="Solly Makamu branded car 4" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item portrait" data-caption="G-One branded sedan">
+                    <div class="gallery-card">
+                        <img src="images/photo5.jpg" alt="Solly Makamu branded car 5" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item portrait" data-caption="G-One promotional vehicle">
+                    <div class="gallery-card">
+                        <img src="images/photo6.jpg" alt="Solly Makamu branded car 6" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landscape Images (7-10) -->
+                <div class="gallery-item landscape" data-caption="G-One branded car side view">
+                    <div class="gallery-card">
+                        <img src="images/photo7.jpg" alt="Solly Makamu branded car 7" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item landscape" data-caption="G-One branded car front view">
+                    <div class="gallery-card">
+                        <img src="images/photo8.jpg" alt="Solly Makamu branded car 8" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item landscape" data-caption="G-One fleet lineup">
+                    <div class="gallery-card">
+                        <img src="images/photo9.jpg" alt="Solly Makamu branded car 9" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="gallery-item landscape" data-caption="G-One branded car rear view">
+                    <div class="gallery-card">
+                        <img src="images/photo10.jpg" alt="Solly Makamu branded car 10" loading="lazy">
+                        <div class="gallery-overlay">
+                            <div class="gallery-icon"><i class="fas fa-expand"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" aria-label="Close lightbox"><i class="fas fa-times"></i></button>
+        <button class="lightbox-prev" aria-label="Previous image"><i class="fas fa-chevron-left"></i></button>
+        <button class="lightbox-next" aria-label="Next image"><i class="fas fa-chevron-right"></i></button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
 
     <!-- Social Media Platforms Section -->
     <section id="social-platforms" class="py-20 morphing-bg relative">
@@ -996,5 +1348,88 @@
             });
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'975a7d1b968d517e',t:'MTc1NjI4NjM4MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'975a7d1b968d517e',t:'MTc1NjI4NjM4MS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script>    <script>
+
+        // Gallery Lightbox Functionality
+        (function() {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            let currentIndex = 0;
+
+            const items = Array.from(galleryItems);
+
+            function openLightbox(index) {
+                currentIndex = index;
+                const item = items[index];
+                const img = item.querySelector('img');
+                const caption = item.getAttribute('data-caption') || '';
+
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxCaption.textContent = caption;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeLightbox() {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+                setTimeout(() => {
+                    lightboxImg.src = '';
+                }, 300);
+            }
+
+            function nextImage() {
+                currentIndex = (currentIndex + 1) % items.length;
+                const item = items[currentIndex];
+                const img = item.querySelector('img');
+                const caption = item.getAttribute('data-caption') || '';
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxCaption.textContent = caption;
+            }
+
+            function prevImage() {
+                currentIndex = (currentIndex - 1 + items.length) % items.length;
+                const item = items[currentIndex];
+                const img = item.querySelector('img');
+                const caption = item.getAttribute('data-caption') || '';
+                lightboxImg.src = img.src;
+                lightboxImg.alt = img.alt;
+                lightboxCaption.textContent = caption;
+            }
+
+            // Event listeners
+            items.forEach((item, index) => {
+                item.addEventListener('click', () => openLightbox(index));
+            });
+
+            document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+            document.querySelector('.lightbox-next').addEventListener('click', (e) => {
+                e.stopPropagation();
+                nextImage();
+            });
+            document.querySelector('.lightbox-prev').addEventListener('click', (e) => {
+                e.stopPropagation();
+                prevImage();
+            });
+
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox || e.target === lightbox.querySelector('.lightbox-content')) {
+                    closeLightbox();
+                }
+            });
+
+            // Keyboard navigation
+            document.addEventListener('keydown', (e) => {
+                if (!lightbox.classList.contains('active')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowRight') nextImage();
+                if (e.key === 'ArrowLeft') prevImage();
+            });
+        })();
+    </script>
+</body>
 </html>
